@@ -1,0 +1,19 @@
+{
+  "name": "moviesapi",
+  "version": "1.0.0",
+  "description": "API for the front end part of the movies application",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "mocha *.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoldunMax/MoviesAPI.git"
+  },
+  "author": "Maksym Koldun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoldunMax/MoviesAPI/issues"
+  },
+  "homepage": "https://github.com/KoldunMax/MoviesAPI#readme"
+}
