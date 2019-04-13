@@ -8,7 +8,7 @@ class MovieService {
     return movieRepository.add(movie);
   }
   getMovieById(id) {
-    return movieRepository.findById(id);
+    return movieRepository.findById({_id: id});
   }
   updateMovie(id, movie) {
     return movieRepository.update({_id: id}, movie);
