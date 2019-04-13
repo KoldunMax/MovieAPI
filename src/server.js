@@ -7,10 +7,9 @@ require("dotenv").config();
 const config = require("./config/env");
 
 require("./middleware")(app);
-// require("./routes")(app);
+require("./routes")(app);
+require("./middleware/errorHandlers")(app);
 
 server.listen(config.port, () => {
   console.log(`Server is running on ${config.host}:${config.port}`);
 });
-
-// require(`./models`);

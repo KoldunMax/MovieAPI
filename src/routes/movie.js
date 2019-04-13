@@ -1,5 +1,4 @@
-const express = require('express');
-const movie = express.Router();
+const movie = require('express').Router();
 const movieService = require('../services/movie');
 
 movie.route('/')
@@ -13,6 +12,7 @@ movie.route('/')
 			});
 	})
 	.post((req, res) => {
+		console.log(req.body);
 		movieService.addMovie(req.body)
 			.then(movie => {
 				res.send(movie);
@@ -21,7 +21,6 @@ movie.route('/')
 				console.log(err);
 			});
 	});
-	
 
 movie.route('/:id')
 	.put((req, res) => {
@@ -51,3 +50,5 @@ movie.route('/:id')
 				console.log(err);
 			});
 	});
+
+module.exports = movie;

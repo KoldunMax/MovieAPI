@@ -1,5 +1,5 @@
 const movie = require("./movie");
 
-module.exports = (app) => {
+module.exports = app => {
   app.use("/api/movies", movie);
 };
