@@ -13,3 +13,6 @@ require("./middleware/errorHandlers")(app);
 server.listen(config.port, () => {
   console.log(`Server is running on ${config.host}:${config.port}`);
 });
+
+module.exports = app;
+

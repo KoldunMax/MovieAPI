@@ -1,5 +1,5 @@
 const movie = require('express').Router();
-const movieService = require('../services/movie');
+const movieService = require('../../services/movie');
 
 movie.route('/')
 	.get((req, res) => {
