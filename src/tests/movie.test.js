@@ -87,7 +87,6 @@ describe('DELETE /api/movies/:id', function() {
     request(app)
       .delete(`/api/movies/${testBody._id}`)
       .expect(({body}) => {
-        console.log(body);
         expect(body).to.be.a('object');
         assert.propertyVal(body, 'n', 1);
         assert.property(body, 'ok', 1);

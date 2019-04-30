@@ -1,5 +1,7 @@
 const movie = require('express').Router();
 const movieService = require('../../services/movie');
+const multer = require('multer')
+const upload = multer()
 
 movie.route('/')
 	.get((req, res) => {
@@ -12,8 +14,18 @@ movie.route('/')
 			});
 	})
 	.post((req, res) => {
-		console.log(req.body);
 		movieService.addMovie(req.body)
+			.then(movie => {
+				res.send(movie);
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	});
+
+
+	movie.post('/file', upload.single('file'), (req, res) => {
+		movieService.addFile(req.file.buffer)
 			.then(movie => {
 				res.send(movie);
 			})
