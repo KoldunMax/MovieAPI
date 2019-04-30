@@ -6,4 +6,4 @@
 1. npm test - to launch tests
 
 # Warning:
-Don't forget to start mongo's daemon by comman 'mongod' via PowerShell
+Don't forget to start a mongo's daemon by a command 'mongod' via PowerShell
